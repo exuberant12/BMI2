@@ -54,8 +54,36 @@
             Console.WriteLine($"5. a, feladat átlagos testsúly: " + $"{atlag:F1} kg");
 
 
-            
 
+            int egeszsegesDb = 0;
+            foreach (var d in list)
+            {
+                if (d.bmi() == "normál")
+                {
+                    egeszsegesDb++;
+                }
+            }
+
+            Console.WriteLine($"5. b, feladat: Egészséges BMI-jű diákok száma: {egeszsegesDb}");
+
+            bool vanTothEva = false;
+
+            foreach (var d in list)
+            {
+                if (d.Név == "Tóth Éva")
+                {
+                    vanTothEva = true;
+                    break;
+                }
+            }
+
+
+            if (vanTothEva)
+                Console.WriteLine("5. c, feladat: Van Tóth Éva a diákok között");
+            else
+                Console.WriteLine("5. c, feladat: Nincs Tóth Éva a diákok között");
+
+            Console.ReadKey();
         }
     }
 }
