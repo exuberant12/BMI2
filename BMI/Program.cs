@@ -18,8 +18,29 @@
                 Diak d=new Diak(név, életkor, magasság, testsúly);
                 list.Add(d);
             }
-            
+            Console.Clear();
+            foreach (var d in list)
+            {
+                Console.WriteLine( );
+                Console.WriteLine(d);
+            }
+            Console.WriteLine($"3. a, Feladat: A diákok száma: {list.Count}");
 
+
+            Diak legmagasabb = list[0];
+            foreach (var d in list)
+            {
+                if (d.Magasság > legmagasabb.Magasság)
+                {
+                    legmagasabb = d;
+                }
+            }
+            Console.WriteLine($"3. b, Feladat: A legmagasabb diák: {legmagasabb.Név}, " +
+                $"{legmagasabb.Magasság} cm");
+
+
+            
+            
         }
     }
 }
