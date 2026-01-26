@@ -85,6 +85,15 @@
 
             Console.ReadKey();
 
+            string fajlba = "Név; BMI/n";
+            foreach (var d in list)
+            {
+                double magassagm = d.Magasság / 100.0;
+                double BMI = d.Testsúly / (magassagm * magassagm);
+
+                fajlba += $"{d.Név};{BMI:F1}\n";
+            }
+            File.WriteAllText("egeszseges_diakok.txt", fajlba);
         }
     }
 }
