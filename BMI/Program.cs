@@ -84,6 +84,7 @@
                 Console.WriteLine("5. c, feladat: Nincs Tóth Éva a diákok között");
 
             Console.ReadKey();
+
         }
     }
 }
