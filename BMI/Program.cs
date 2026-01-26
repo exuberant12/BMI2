@@ -41,8 +41,20 @@
 
             foreach (var d in list)
             {
-                    Console.WriteLine(d.Név+":"+d.bmi() );            
+                    Console.WriteLine(d.Név+":"+d.bmi() );
             }
+
+
+            double atlag = 0;
+            foreach (var d in list)
+            {
+                atlag += d.Testsúly;
+            }
+            atlag /= list.Count;
+            Console.WriteLine($"5. a, feladat átlagos testsúly: " + $"{atlag:F1} kg");
+
+
+            
 
         }
     }

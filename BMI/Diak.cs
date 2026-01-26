@@ -52,5 +52,7 @@ namespace BMI
                 return "elhízott";
             }
         }
+
+        
     }
 }
