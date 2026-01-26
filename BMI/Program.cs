@@ -39,8 +39,11 @@
                 $"{legmagasabb.Magasság} cm");
 
 
-            
-            
+            foreach (var d in list)
+            {
+                    Console.WriteLine(d.Név+":"+d.bmi() );            
+            }
+
         }
     }
 }

@@ -30,5 +30,27 @@ namespace BMI
         {
             return $"{Név} {Életkor}éves {Magasság}cm {Testsúly}kg";
         }
+
+        public string bmi()
+        {
+            double magassagm = Magasság / 100.0;
+            double bmi = Testsúly / (magassagm * magassagm);
+            if (bmi < 18.5)
+            {
+                return "sovány";
+            }
+            else if (bmi < 24.9)
+            {
+                return "normál";
+            }
+            else if (bmi < 29.9)
+            {
+                return "túlsúlyos";
+            }
+            else
+            {
+                return "elhízott";
+            }
+        }
     }
 }
